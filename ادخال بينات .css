@@ -1,0 +1,264 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.gg{
+  background-color: #f0f0f0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px ;
+}
+.logo{
+  text-decoration: none;
+  color: #135a2e;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8em;
+}
+header{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;;
+    background:#fff;
+  }
+.logo{
+    text-decoration: none;
+   
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.navigation a{
+    color: #135a2e;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover{
+color: darkblue;
+}
+
+
+.containe {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.containe header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.containe .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px ;
+ 
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline:none ;
+  border:none ;
+  color: #000;
+  font: size 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: darkblue;
+}
+.form button:hover {
+  background:darkblue;
+}
+.footer {
+  background-color: #000016;
+  color: #fff;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.footer-title span {
+  color: #135a2e;
+}
+
+.footer .social-icons a{
+  font-size: 1.3em;
+  padding: 0 12px 0 0;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.7em;
+  padding-right: 30px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+
+
+
+.toggle {
+  position: fixed;
+  top: 100px;
+  left: 30px;
+
+  width: 150px;
+  height: 70px;
+  border-radius: 50px;
+  border: 0.1px solid var(--light-color);
+  background-color: var(--bg-color);
+  box-shadow: inset 10px 10px 15px var(--darker-color),
+    inset -10px -10px 15px var(--light-color);
+}
+
+.toggle label {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.toggle-icon {
+  background-image: url("imgs/sun.svg");
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 100px;
+  pointer-events: none;
+  position: relative;
+  transition: var(--transition-all);
+
+  box-shadow: 
+    /* offset */ 0px 0px 0px 3px var(--bg-color),
+    /*bottom right */ 4px 4px 7px var(--darker-color),
+    /* top left */ -4px -4px 7px var(--light-color);
+}
+
+.toggle-icon .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--transition-all);
+}
+
+.toggle-icon .moon {
+  opacity: 0;
+}
+
+.toggle input {
+  opacity: 0.3;
+  width: 150px;
+  height: 70px;
+  opacity: 0;
+  cursor: pointer;
+}
+ 
+.toggle input:checked + label .toggle-icon {
+  transform: translateX(80px) rotate(360deg);
+}
+
+.toggle input:checked + label .icon.moon {
+  opacity: 1;
+}
+.toggle input:checked + label .icon.sun {
+  opacity: 0;
+}
